@@ -1,0 +1,9 @@
+Comments for package.json, because JSON files do not allow comments, only data.
+
+
+"scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+}
+// node-sass will watch scss/ file, compile into regular css and put into dist/css folder
+// --recursive, if not then may have issues with partials (scss partials to the main.scss) and autoreload
+
