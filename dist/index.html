@@ -7,11 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome</title>
+    <!-- Use font-awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <!-- Note: the main.css is compiled down from sass -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <h1>Hello</h1>
+    <header>
+        <div class="menu-button">
+            <!-- Each of the 3 button-line divs represent a line in the menu icon -->
+            <div class="button-line"></div>
+            <div class="button-line"></div>
+            <div class="button-line"></div>
+
+            <nav class="menu">
+                <div class="menu-profilePic">
+                    <div class="profilePic">
+                        <!-- profile picture is put in with css -->
+                    </div>
+                </div>
+                <ul class="menu-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/aboutMe.html" class="nav-link">
+                            About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/projects.html" class="nav-link">
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact.html" class="nav-link">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main id="home">
+        <h1 class="large-heading">
+            <span class="text-secondary">Nianxu</span> Wang
+        </h1>
+        <h2 class="small-heading">
+            Computer Science Student at the University of Southern Califoria
+        </h2>
+        <!-- This is the row of social media icons -->
+        <div class="icons">
+            <!-- Note change links to go to the social media profiles -->
+            <a href="#!">
+                <!-- font-awesome class fa-2x makes the linkedin icon bigger -->
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
