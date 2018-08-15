@@ -1,6 +1,47 @@
 $primary-color: #444;
 
+* {
+  // For everything.
+  // Include padding and border in the element's total width and height
+  box-sizing: border-box;
+}
+
 body {
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 500;
+
+  &.large-heading {
+    //Adding & means the class .large-heading that is attached to h1 h2 h3, NOT within
+    font-size: 5rem;
+  }
+
+  &.small-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; //LeftRight TopBottom
+    //use the primary color and lighten it as the bg
+    //wrap in rgba, so you can set the alpha to 0.5, and so can see through to background
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+a {
+  // Sets the social media icons
+  color: white;
+  text-decoration: none; //no underline
+}
+
+header {
+  position: fixed;
 }
