@@ -1,0 +1,21 @@
+// Menu button
+.menu-button {
+  position: absolute;
+  z-index: 10; //so always at topmost layer
+  right: 35px;
+  top: 35px;
+
+  cursor: pointer; //finger pointer when hovering over it
+  @include easeOut; //this mixin is in config, which is imported before this _menu.scss is
+
+  .button-line {
+    //this makes the 3 lines of the menu button, contained in the menu-button class
+    width: 30px;
+    height: 3px;
+
+    margin: 0 0 5px 0; //only margin on bottom
+    background: white;
+
+    @include easeOut;
+  }
+}
