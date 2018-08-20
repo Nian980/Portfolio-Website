@@ -1,0 +1,37 @@
+$primary-color: #444; //grayish
+$secondary-color: #eece1a; //yellowish
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.5;
+
+// !!!! change secondary color to some sort of blue, think of bugatti chiron blue and carbon gray
+
+// like a function, allows you to call it elsewhere
+@mixin easeOut {
+  transition: all 1s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image {
+    //if show-home-image is true
+    &#background-image {
+      //this id is with the body tag
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      // a layer of gray over the background and below text
+      //a pseudoelement, something not actually in html, but css treats it like an actual element after #background-image
+      &:after {
+        content: ""; //need this for 'before'/'after'. No content here, but can put in like an image
+        position: absolute; //to cover whole body
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primary-color, $background-opacity);
+        z-index: -1; //so the text can move up and not be covered by this overlay
+      }
+    }
+  }
+}

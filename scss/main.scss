@@ -1,4 +1,5 @@
-$primary-color: #444;
+@import "config";
+//ignore underscore and file extension when import
 
 * {
   // For everything.
@@ -7,6 +8,7 @@ $primary-color: #444;
 }
 
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
@@ -43,5 +45,43 @@ a {
 }
 
 header {
+  // So the the header (basically the menu icon) don't scroll with the page
   position: fixed;
+  z-index: 10; //always at front
+  width: 100%; //across whole screen
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  // only affect the div icons class inside main
+  .icons {
+    margin-top: 1rem; //push the icons down from h2 a little
+
+    a {
+      // each icon is wrapped in 'a', making some space between them
+      padding: 0.4rem;
+
+      //bascialy a:hover
+      &:hover {
+        color: $secondary-color;
+        // create a fade into the secondary color effect that takes 1s,
+        // calls the transition defined in the mixin at the top
+        @include easeOut();
+      }
+    }
+  }
+
+  //do this to affect this main only, as i added an id="home"
+  &#home {
+    overflow: hidden; //never show scrollbars
+    h1 {
+      margin-top: 20vh; //20% of viewport height
+    }
+  }
 }
