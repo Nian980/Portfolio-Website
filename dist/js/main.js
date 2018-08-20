@@ -1,7 +1,7 @@
-// Select DOM items of the menu
+// Select and manipulate the DOM items of the menu
 
 // selects the button-menu class (querySelector works with classes, ids...etc.)
-const menuButton = document.querySelector(".button-menu");
+const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const menuProfilePic = document.querySelector(".menu-profilePic");
@@ -32,6 +32,7 @@ function toggleMenu() {
     menu.classList.remove("show");
     menuNav.classList.remove("show");
     menuProfilePic.classList.remove("show");
+    navItems.forEach(item => item.classList.remove("show"));
 
     //now menu is closed, set it to false
     showMenu = false;
