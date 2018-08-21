@@ -41,3 +41,33 @@
     }
   }
 }
+
+// Menu overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9; //see through to background
+
+  // By default, the menu items (Home, About...etc.) are hidden.
+  visibility: hidden;
+
+  // Only when we added the 'show' class with javascript to .menu do we show the items
+  &.show {
+    visibility: visible;
+  }
+
+  // Styling for both the profile pic side and the nav side
+  // "-profilePic" works because it turns into whatever's right at the top (.menu) and adds "-profilePic" to get "menu-profilePic"
+  &-profilePic,
+  &-nav {
+    display: flex; //css flexbox
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%; //half the width of the screen
+    height: 100vh; //the viewport will cover the whole viewport
+    overflow: hidden; //never show scrollbars
+  }
+}
