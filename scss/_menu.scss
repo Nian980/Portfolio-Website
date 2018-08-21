@@ -105,7 +105,7 @@
     .profilePic {
       width: 200px;
       height: 200px;
-      background: url("../img/profile_small.jpg");
+      background: url("../img/profile_small_bw.jpg");
       border-radius: 50%; //circular
       border: solid 4px $secondary-color;
     }
@@ -119,6 +119,28 @@
     &.show {
       //slides in from right
       transform: translate3d(0, 0, 0);
+    }
+
+    //access the links to color them
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  // style the nav page links (Home, About...etc)
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 1rem 0; //1rem top/bottom, 0 padding LR
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
     }
   }
 }

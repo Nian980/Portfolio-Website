@@ -55,14 +55,28 @@
     .menu-profilePic .profilePic {
       width: 200px;
       height: 200px;
-      background: url("../img/profile_small.jpg");
+      background: url("../img/profile_small_bw.jpg");
       border-radius: 50%;
-      border: solid 4px #eece1a; }
+      border: solid 4px #4183d7; }
   .menu .nav-item {
     transform: translate3d(-600px, 0, 0);
     transition: all 0.3s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #4183d7; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-out; }
+    .menu .nav-link:hover {
+      color: #4183d7; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -126,7 +140,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #4183d7; }
 
 main {
   padding: 4rem;
@@ -136,7 +150,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #4183d7;
         transition: all 0.3s ease-out; }
   main#home {
     overflow: hidden; }
