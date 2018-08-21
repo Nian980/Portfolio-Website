@@ -47,7 +47,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9; //see through to background. affects entire menu, even text
+  opacity: 0.95; //see through to background. affects entire menu, even text
 
   // By default, the menu items (Home, About...etc.) are hidden.
   visibility: hidden;
@@ -92,7 +92,7 @@
   }
 
   // profile pic side
-  &.profilePic {
+  &-profilePic {
     background: $primary-color;
 
     transform: translate3d(0, 100%, 0);
@@ -101,5 +101,35 @@
     &.show {
       transform: translate3d(0, 0, 0);
     }
+
+    .profilePic {
+      width: 200px;
+      height: 200px;
+      background: url("../img/profile_small.jpg");
+      border-radius: 50%; //circular
+      border: solid 4px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    //like above, off-screen until show
+    transform: translate3d(-600px, 0, 0); //off screen to the left 600px
+    @include easeOut;
+
+    &.show {
+      //slides in from right
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+//delay each nav item sliding in by 0.1s
+@for $x from 1 through 4 {
+  //we have 4 items in nav menu
+  //i.e. for (int i=0; i<4; i++), but we use variable $x here for each item
+
+  //must wrap it in number sign and curly braces for variable interpolation expression substitution
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
