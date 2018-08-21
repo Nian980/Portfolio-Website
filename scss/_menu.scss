@@ -2,7 +2,7 @@
 .menu-button {
   position: absolute;
   z-index: 10; //so always at topmost layer
-  right: 40px;
+  left: 40px; //was right
   top: 40px;
 
   cursor: pointer; //finger pointer when hovering over it
@@ -47,7 +47,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9; //see through to background
+  opacity: 0.9; //see through to background. affects entire menu, even text
 
   // By default, the menu items (Home, About...etc.) are hidden.
   visibility: hidden;
@@ -69,5 +69,37 @@
     width: 50%; //half the width of the screen
     height: 100vh; //the viewport will cover the whole viewport
     overflow: hidden; //never show scrollbars
+  }
+
+  // only styling the page nav part
+  &-nav {
+    margin: 0;
+    padding: 0;
+    //use primary color but darken it a little
+    background: darken($primary-color, 18);
+    list-style: none;
+
+    //initially hidden off the top of the page
+    transform: translate3d(0, -100%, 0);
+    //100% pushes it down, -100% pushes it up
+    @include easeOut;
+
+    // when show class is applied
+    &.show {
+      transform: translate3d(0, 0, 0); //goes back to original positon
+      // along with easeOut, creates a slide-in from the top effect
+    }
+  }
+
+  // profile pic side
+  &.profilePic {
+    background: $primary-color;
+
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
