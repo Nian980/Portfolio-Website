@@ -1,0 +1,29 @@
+// Extra Large wide screen devices
+@include mediaExtraLarge {
+}
+
+// Some laptops
+@include mediaLarge {
+}
+
+// Tablets mainly
+@include mediaMedium {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .large-heading {
+      //cuz name will be top/bottom after squished, reduce the gap inbetween
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Mostly smartphones
+@include mediaSmall {
+  //access the large heading (my name)
+  main#home h1 {
+    margin-top: 10vh;
+  }
+}

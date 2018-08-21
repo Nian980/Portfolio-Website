@@ -36,3 +36,31 @@ $background-opacity: 0.5;
     }
   }
 }
+
+// Media query mixins
+
+// For small mobile devices
+@mixin mediaSmall {
+  //any css in here will only apply if screen width < 500px
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMedium {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLarge {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaExtraLarge {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

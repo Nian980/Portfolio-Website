@@ -1,6 +1,8 @@
 @import "config";
 @import "menu";
+@import "mobile";
 //ignore underscore and file extension when import
+//underscore before name means its a partial
 
 * {
   // For everything.
