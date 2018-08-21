@@ -1,0 +1,2 @@
+Sass variable names are prefixed with a $ sign
+#{} is variable interpolation expression substitution
