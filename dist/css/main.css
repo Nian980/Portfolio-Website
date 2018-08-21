@@ -11,6 +11,8 @@
     margin: 0 0 5px 0;
     background: white;
     transition: all 1s ease-out; }
+  .menu-button.close {
+    transform: rotate(180deg); }
 
 * {
   box-sizing: border-box; }

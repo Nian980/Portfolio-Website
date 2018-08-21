@@ -18,4 +18,10 @@
 
     @include easeOut;
   }
+
+  // Rotate the 3 bars of the menu button into X
+  &.close {
+    //style the menu button when it has the class of 'close'
+    transform: rotate(180deg);
+  }
 }
