@@ -72,7 +72,7 @@ main {
       &:hover {
         color: $secondary-color;
         // create a fade into the secondary color effect that takes 1s,
-        // calls the transition defined in the mixin at the top
+        // calls the transition defined in the mixin in the config file
         @include easeOut();
       }
     }
