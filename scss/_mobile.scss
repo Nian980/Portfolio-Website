@@ -18,6 +18,36 @@
       margin-bottom: 1rem;
     }
   }
+
+  ul.menu-nav,
+  div.menu-profilePic {
+    //for menu, if screen small, turn into row and menu enters L/R
+    float: none; //don't float left side by side
+    width: 100%; //and now instead of 50% each they both go across screen
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    //navigation menu takes up 75% of the screen
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 18px;
+  }
+
+  .menu-profilePic {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .profilePic {
+      background: url("../img/profile_small_bw.jpg");
+      width: 120px;
+      height: 120px;
+    }
+  }
 }
 
 // Mostly smartphones

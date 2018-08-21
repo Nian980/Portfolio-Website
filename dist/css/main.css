@@ -24,7 +24,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.95;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -40,14 +39,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #161616;
+    background: rgba(22, 22, 22, 0.95);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.3s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-profilePic {
-    background: #444;
+    background: rgba(68, 68, 68, 0.95);
     transform: translate3d(0, 100%, 0);
     transition: all 0.3s ease-out; }
     .menu-profilePic.show {
@@ -55,7 +54,7 @@
     .menu-profilePic .profilePic {
       width: 200px;
       height: 200px;
-      background: url("../img/profile_small_bw.jpg");
+      background: url("../img/profile_medium_bw.jpg");
       border-radius: 50%;
       border: solid 4px #4183d7; }
   .menu .nav-item {
@@ -68,7 +67,7 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 20px;
+    font-size: 22px;
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 200;
@@ -96,7 +95,26 @@
     text-align: center; }
     main .large-heading {
       line-height: 1;
-      margin-bottom: 1rem; } }
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-profilePic {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-profilePic.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 18px; }
+  .menu-profilePic {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-profilePic .profilePic {
+      background: url("../img/profile_small_bw.jpg");
+      width: 120px;
+      height: 120px; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
