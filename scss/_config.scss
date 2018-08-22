@@ -6,7 +6,7 @@ $background-opacity: 0.5;
 
 // !!!! change secondary color to some sort of blue, think of bugatti chiron blue and carbon gray
 
-// like a function, allows you to call it elsewhere
+// like a function, allows you to call it elsewhere, except mixins cannot return anything
 @mixin easeOut {
   transition: all 0.3s ease-out;
   //all thats part of whichever class called it will have their css transitions ease out for how many seconds
@@ -34,6 +34,16 @@ $background-opacity: 0.5;
         z-index: -1; //so the text can move up and not be covered by this overlay
       }
     }
+  }
+}
+
+// A function that sets text color,
+// returns the color black or white depending on how light the primary color is
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
   }
 }
 
