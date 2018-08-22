@@ -23,7 +23,8 @@ body {
 // Headings
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   font-weight: 500;
 
@@ -32,12 +33,20 @@ h3 {
     font-size: 5rem;
   }
 
+  &.medium-heading {
+    font-size: 3rem;
+  }
+
   &.small-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem; //LeftRight TopBottom
     //use the primary color and lighten it as the bg
     //wrap in rgba, so you can set the alpha to 0.5, and so can see through to background
-    background: rgba(lighten($primary-color, 2), 0.5);
+    // background: rgba(lighten($primary-color, 2), 0.5); //looks bad with this strip rn
+  }
+
+  &.location-heading {
+    font-style: italic;
   }
 }
 
@@ -60,7 +69,9 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  // to make sticky footer, calculate the height
+  // height: 100%;
+  min-height: calc(100vh - 60px); //full viewport height - footer height
 
   // only affect the div icons class inside main
   .icons {
@@ -94,6 +105,7 @@ main {
   display: grid;
   grid-gap: 30px;
   //bio-profilePic bio bio means bio takes up 2/3 of the space, and bio-profilePic 1/3
+  //Must have same number of columns for each row
   grid-template-areas:
     "bioPic bio bio"
     "school1 school2 school3";
@@ -122,4 +134,19 @@ main {
 
 .school-3 {
   grid-area: school3;
+}
+
+.school {
+  background: lighten($primary-color, 5);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+}
+
+//created sticky footer under main
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
 }

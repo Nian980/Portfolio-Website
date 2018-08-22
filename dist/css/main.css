@@ -146,19 +146,31 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   font-weight: 500; }
   h1.large-heading,
   h2.large-heading,
-  h3.large-heading {
+  h3.large-heading,
+  h4.large-heading {
     font-size: 5rem; }
+  h1.medium-heading,
+  h2.medium-heading,
+  h3.medium-heading,
+  h4.medium-heading {
+    font-size: 3rem; }
   h1.small-heading,
   h2.small-heading,
-  h3.small-heading {
+  h3.small-heading,
+  h4.small-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    padding: 0.2rem 1rem; }
+  h1.location-heading,
+  h2.location-heading,
+  h3.location-heading,
+  h4.location-heading {
+    font-style: italic; }
 
 a {
   color: white;
@@ -174,7 +186,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -211,3 +223,15 @@ main {
 
 .school-3 {
   grid-area: school3; }
+
+.school {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: #4183d7 5px solid; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: white;
+  height: 60px; }
