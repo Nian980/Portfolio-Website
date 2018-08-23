@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 //ignore underscore and file extension when import
 //underscore before name means its a partial
 
@@ -137,8 +136,10 @@ main {
 }
 
 .school {
+  //add a gray bg and blue border above and beneath to style it
   background: lighten($primary-color, 5);
   padding: 0.5rem;
+  border-top: $secondary-color 5px solid;
   border-bottom: $secondary-color 5px solid;
 }
 
@@ -150,3 +151,6 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+
+//on the bottom here cuz we want it to run after the initial css
+@import "mobile";
