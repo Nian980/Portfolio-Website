@@ -48,6 +48,17 @@
       height: 120px;
     }
   }
+
+  .about-info {
+    //now stack the css grid when screen size medium
+    grid-template-areas:
+      "bioPic"
+      "bio"
+      "school1"
+      "school2"
+      "school3";
+    grid-template-columns: 1fr;
+  }
 }
 
 // Mostly smartphones

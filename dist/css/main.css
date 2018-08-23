@@ -231,7 +231,10 @@ main {
     .menu-profilePic .profilePic {
       background: url("../img/profile_small_bw.jpg");
       width: 120px;
-      height: 120px; } }
+      height: 120px; }
+  .about-info {
+    grid-template-areas: "bioPic" "bio" "school1" "school2" "school3";
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
