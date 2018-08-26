@@ -211,6 +211,24 @@ main {
       border-color: #4183d7;
       transition: all 0.3s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.1rem;
+    border: 3px white solid;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    transition: all 0.3s ease-out; }
+    .boxes div:hover {
+      background: #4183d7;
+      color: black; }
+      .boxes div:hover span {
+        color: black; }
+
 .button, .button-dark, .button-light {
   display: block;
   padding: 0.5rem 1rem;
