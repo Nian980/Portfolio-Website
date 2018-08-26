@@ -81,6 +81,11 @@
     margin-top: 10vh;
   }
 
+  .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem;
+  }
+
   .projects {
     //for small screens, have 1 project in a row
     grid-template-columns: 1fr;

@@ -7,3 +7,8 @@ Comments for package.json, because JSON files do not allow comments, only data.
 // node-sass will watch scss/ file, compile into regular css and put into dist/css folder
 // --recursive, if not then may have issues with partials (scss partials to the main.scss) and autoreload
 
+It's for the homepage of the deployed website. Need to specify the repo
+"homepage": "https://Nian980.github.io/Portfolio-Website"
+
+"deploy": "gh-pages -d dist"
+Means the directory to deploy is the dist folder
