@@ -143,24 +143,6 @@ main {
   border-bottom: $secondary-color 5px solid;
 }
 
-//Projects page
-.projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
-
-  img {
-    width: 100%;
-    border: 3px solid white;
-
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
-  }
-}
-
 //Style for contact page
 .boxes {
   display: flex;
@@ -203,6 +185,24 @@ main {
   }
 }
 
+//Projects page
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px solid white;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
 //Button styles for Project page
 .button {
   display: block;
@@ -216,7 +216,7 @@ main {
   }
 }
 
-//There is no class button, only button-dark and button-light.
+//There is no class button in the project page, only button-dark and button-light.
 //So extend the button class
 .button-dark {
   @extend .button;
