@@ -199,12 +199,49 @@ main {
   border-top: #4183d7 5px solid;
   border-bottom: #4183d7 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px solid white; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #4183d7;
+      transition: all 0.3s ease-out; }
+
+.button, .button-dark, .button-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .button:hover, .button-dark:hover, .button-light:hover {
+    background: #4183d7;
+    color: black; }
+
+.button-dark {
+  background: black;
+  color: white; }
+
+.button-light {
+  background: #c4c4c4;
+  color: #333; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
   color: white;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -234,8 +271,12 @@ main {
       height: 120px; }
   .about-info {
     grid-template-areas: "bioPic" "bio" "school1" "school2" "school3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }

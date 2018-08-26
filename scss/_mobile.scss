@@ -1,9 +1,17 @@
 // Extra Large wide screen devices
 @include mediaExtraLarge {
+  .projects {
+    //for extra large screens, have 4 projects in a row
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Some laptops
 @include mediaLarge {
+  .projects {
+    //for large screens, have 3 projects in a row
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets mainly
@@ -59,6 +67,11 @@
       "school3";
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    //for medium screens, have 2 projects in a row
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Mostly smartphones
@@ -66,5 +79,10 @@
   //access the large heading (my name)
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  .projects {
+    //for small screens, have 1 project in a row
+    grid-template-columns: 1fr;
   }
 }
