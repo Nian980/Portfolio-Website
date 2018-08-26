@@ -186,6 +186,23 @@ main {
   }
 }
 
+//icons for contact page
+.icons-contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+
+  a {
+    padding: 0.4rem;
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut();
+    }
+  }
+}
+
 //Button styles for Project page
 .button {
   display: block;

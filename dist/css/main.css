@@ -229,6 +229,17 @@ main {
       .boxes div:hover span {
         color: black; }
 
+.icons-contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem; }
+  .icons-contact a {
+    padding: 0.4rem; }
+    .icons-contact a:hover {
+      color: #4183d7;
+      transition: all 0.3s ease-out; }
+
 .button, .button-dark, .button-light {
   display: block;
   padding: 0.5rem 1rem;
