@@ -123,6 +123,16 @@ main {
   font-size: 1.5rem;
 }
 
+.resume-link {
+  font-style: italic;
+  font-size: 1rem;
+  text-decoration: underline;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
 .school-1 {
   grid-area: school1;
 }
