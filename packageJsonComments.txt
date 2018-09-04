@@ -8,7 +8,9 @@ Comments for package.json, because JSON files do not allow comments, only data.
 // --recursive, if not then may have issues with partials (scss partials to the main.scss) and autoreload
 
 It's for the homepage of the deployed website. Need to specify the repo
-"homepage": "https://Nian980.github.io/Portfolio-Website"
+"homepage": "https://nian980.github.io/Portfolio-Website"
 
 "deploy": "gh-pages -d dist"
 Means the directory to deploy is the dist folder
+
+npm run deploy
