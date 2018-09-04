@@ -184,6 +184,13 @@ main {
   grid-area: bio;
   font-size: 1.5rem; }
 
+.resume-link {
+  font-style: italic;
+  font-size: 1rem;
+  text-decoration: underline; }
+  .resume-link:hover {
+    color: #4183d7; }
+
 .school-1 {
   grid-area: school1; }
 
@@ -307,5 +314,8 @@ main {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
+  .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }
